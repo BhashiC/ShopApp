@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../providers/products.dart';
 import '../widgets/badge.dart' as shopBadge;
 import '../providers/cart.dart';
+import '../screens/cart_screen.dart';
 
 enum FilterOptions {
   all,
@@ -55,7 +56,9 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
               icon: const Icon(
                 Icons.shopping_cart,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed((CartScreen.routeName));
+              },
             ),
           ),
         ],
